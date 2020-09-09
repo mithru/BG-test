@@ -1,7 +1,41 @@
-model-viewer {
-  width: 100%;
-  height: 600px;
+body {
+  margin: 1em;
+  padding: 0;
+  font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
+  color: #244376;
 }
+
+button {
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 12px 50%;
+  background-color: #fff;
+  padding: 0px 16px 0px 40px;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  color:#4285f4;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  border: 1px solid #DADCE0;
+}
+
+button:active {
+  background-color: #E8EAED;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 1px solid #4285f4;
+}
+
+model-viewer {    model-viewer {
+  width: 100%;      width: 100%;
+  height: 600px;      height: 600px;
+}    }
 
 <!-- for lazy loading -->
 #lazy-load-poster {
