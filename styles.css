@@ -37,7 +37,7 @@ model-viewer {
   height: 600px;
 }
 
-<!-- for lazy loading -->
+/* for lazy loading */
 #lazy-load-poster {
    position: absolute;
    left: 0;
@@ -49,7 +49,7 @@ model-viewer {
    background-position: center;
  }
 
-<!-- for lazy loading -->
+/* for lazy loading */
  #button-load {
    background-repeat: no-repeat;
    background-size: 24px 24px;
