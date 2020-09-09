@@ -49,7 +49,7 @@ model-viewer {
    background-position: center;
  }
 
-/* for lazy loading */
+/* for lazy loading */ 
  #button-load {
    background-repeat: no-repeat;
    background-size: 24px 24px;
