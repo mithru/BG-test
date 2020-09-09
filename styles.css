@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: Google Sans, Noto, Roboto, Helvetica Neue, sans-serif;
   color: #244376;
-} 
+}
 
 button {
   background-repeat: no-repeat;
@@ -32,10 +32,10 @@ button:focus-visible {
   outline: 1px solid #4285f4;
 }
 
-model-viewer {    model-viewer {
-  width: 100%;      width: 100%;
-  height: 600px;      height: 600px;
-}    }
+model-viewer {
+  width: 100%;
+  height: 600px;
+}
 
 <!-- for lazy loading -->
 #lazy-load-poster {
