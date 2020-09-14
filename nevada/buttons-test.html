@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<title> SceneViewer </title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../hotspot-styles.css">
+        <script src="../hotspots.js"></script>
+               
+		<!-- The following libraries and polyfills are recommended to maximize browser support -->
+		<!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+		<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+
+		<!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+		<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+		<!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+		<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+
+		<!-- 💁 OPTIONAL: Fullscreen polyfill is needed to fully support AR features -->
+		<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>
+		<script src="https://unpkg.com/focus-visible@5.1.0/dist/focus-visible.js"></script>
+
+		<script src="https://dky5neca2x8co.cloudfront.net/model-viewer-public/timeme.min.js"></script>
+
+		<script src="https://dky5neca2x8co.cloudfront.net/model-viewer-public/statstrack.min.js"></script>
+
+		<!-- Import the component -->
+		<script type="module" src="https://dky5neca2x8co.cloudfront.net/model-viewer-public/model-viewer.js"></script>
+		<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+	</head>
+	<body>
+	<div class="card">
+	
+	<!-- Change the collection and id according to the respective product -->
+    	<!-- Change the links according to the respective products. -->
+	<model-viewer
+		name = "model-viewer" 
+        client = "Bolle"
+        collection = "Nevada"
+        id = "1921-21832"
+		ar
+		alt="Bolle Nevada"
+        src = "https://dky5neca2x8co.cloudfront.net/Bolle/models/glb/1921-21832.glb"
+        ios-src = "https://dky5neca2x8co.cloudfront.net/Bolle/models/usdz/1921-21832.usdz"
+        environment-image="https://dky5neca2x8co.cloudfront.net/Bolle/common/BLUR-half.hdr"
+		stage-light-intensity="1"
+		exposure="1"
+		camera-controls
+		interaction-prompt="auto"
+		reveal="interaction"
+        onmouseover="mvHoverOn()"
+        onmouseout="mvHoverOff()"
+		>
+		   
+        	<!-- Change the link according to the respective products -->
+		<div id="lazy-load-poster" slot="poster" style="background-image:url(https://dky5neca2x8co.cloudfront.net/Bolle/models/posters/1921-21832.png);"></div>
+        <div id="button-load" slot="poster">Click to View 3D Model</div>
+        <button onmouseover="hs_show('d_1')" onmouseout="hs_hide('d_1')" class="Hotspot hs-element" slot="hotspot-1" data-position="-0.05807870533807735m -0.014939506821524895m 0.008675422572849256m" data-normal="-0.7959331831979052m 0.0024451149569541452m 0.6053795415252297m"  data-visibility-attribute="visible"></button>
+              
+        <div id="d_1" class="hs hs-element" slot="" data-position= "" data-normal="">
+            <p class="ex2">
+            <span class="font_t">
+                PLATINUM ANTI-FOG
+            </span>
+            </p>
+            <p class="ex1">
+            <span class="font_b">
+            10x Better Anti-Fog
+            </span>
+            </p>
+            <p class="ex1">
+            <span class="font_b">
+            40x Better Anti-Scratch than Competition
+            </span>
+            </p>
+            <img class="images" src="../images/platinum_anti_fog_icons.png">
+        </div>
+
+        <button onmouseover="hs_show('d_2')" onmouseout="hs_hide('d_2')" class="Hotspot hs-element" slot="hotspot-3" data-position="0.029542081610780185m 0.020942646701607184m 0.028690719608425425m" data-normal="0.3394406350280634m 0.010041813393059061m 0.9405738765644749m"  data-visibility-attribute="visible"></button>
+
+        <div id="d_2" class="hs hs-element" slot="" data-position= "" data-normal="">
+            <span class="font_t">
+            DOUBLE LENS
+            </span>
+            </p>
+            <p class="ex1">
+            <span class="font_b">
+            Dual Pane Sealed Lenses Prevent Condensation
+            </span>
+            </p>
+            <img class="images" src="../images/double_lens_icons.png">
+        </div>
+
+        <button onmouseover="hs_show('d_3')" onmouseout="hs_hide('d_3')" class="Hotspot hs-element" slot="hotspot-5" data-position="0.052086793558609346m -0.031589526297072394m 0.015516422506846081m" data-normal="0.6624432400254955m -0.13273724262476902m 0.7372582845685065m"  data-visibility-attribute="visible"></button>
+        <div id="d_3" class="hs hs-element" slot="" data-position= "" data-normal=""> <!-- remove some of this -->
+            <p class="ex2">
+            <span class="font_t">
+            LIGHT ADAPTIVE
+            </span>
+            </p>
+            <p class="ex1">
+            <span class="font_b">
+            Lens Tint Adapts to Sunny or Cloudy Conditions
+            </span>
+            </p>
+            <img class="images" src="../images/light_adaptive_icons_03.png">
+        </div>
+	</model-viewer>
+	</div>
+    </body>
+</html>

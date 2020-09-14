@@ -1,0 +1,151 @@
+/* This keeps child nodes hidden while the element loads */
+:not(:defined) > * {
+  display: none;
+}
+
+.images {
+    margin-top: 5px;
+    position: absolute;
+    right: 3px;
+    transform: translate(0, -90%)
+}
+@font-face{
+    font-family: "bold";
+    src: url(fonts/Gotham-Narrow-Bold.ttf);
+}
+
+@font-face{
+    font-family: "book";
+    src: url(fonts/Gotham-Narrow-Book.ttf);
+}
+ 
+.font_t{
+    font-family: "bold";
+    letter-spacing: 3px;
+    font-size: 26px;
+}
+
+.font_b{
+    font-family: "book";
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+p.ex1 {
+    width: 300px;
+    margin: 0px;
+    padding-top: 7px;
+    padding-bottom: 0px;
+    line-height: 1.2em;
+}
+
+p.ex2 {
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 6px;
+}
+
+.Hotspot{
+   background: #fff;
+   border-radius: 32px;
+   border: 0;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+   box-sizing: border-box;
+   cursor: pointer;
+   height: 24px;
+   padding: 8px;
+   position: relative;
+   --min-hotspot-opacity: 0;
+   transition: opacity 0.3s;
+   width: 24px;
+   -webkit-animation-timing-function: ease-in-out;
+   -webkit-animation-name: breathe;
+   -webkit-animation-duration: 1500ms;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-direction: alternate;
+}
+
+.Hotspot:not([data-visible]){
+    opacity:0;
+    animation-name: none;
+}
+               
+@-webkit-keyframes breathe {
+    0% {
+       opacity: .4;
+       box-shadow: 0 1px 2px rgba(0, 147, 223, 0.4), 0 1px 1px rgba(0, 147, 223, 0.1) inset;
+    }
+    100% {
+       opacity: 1;
+       box-shadow: 0 1px 30px #0093df, 0 1px 20px #0093df inset;
+    }
+}
+
+
+.Hotspot:focus {
+   border: 4px solid rgb(0, 128, 200);
+   height: 32px;
+   outline: none;
+   width: 32px;
+}
+
+.hs{
+    z-index: 5;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    height: full-content;
+    width: 50%;
+    border: 2px groove #f0f0f0;
+    display: none;
+    background: #fff;
+    border-radius: 5px;
+    margin: auto;
+    color: rgba(0, 0, 0, 1);
+    --min-hotspot-opacity: 40%;
+    padding: 15px;
+    width: 480px;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-name: fade-in;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+               
+button {
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 12px 50%;
+    background-color: #fff;
+    padding: 0px 16px 0px 40px;
+    font-family: Roboto Regular, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    color:#4285f4;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 18px;
+    border: 1px solid #DADCE0;
+}
+
+button:active {
+    background-color: #E8EAED;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:focus-visible {
+    outline: 1px solid #4285f4;
+}
