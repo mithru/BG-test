@@ -135,6 +135,7 @@ p.ex2 {
     background: #fff;
     border-radius: 5px;
     color: rgba(0, 0, 0, 1);
+    transition: .5s ease;
     --min-hotspot-opacity: 40%;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-name: fade-in;
