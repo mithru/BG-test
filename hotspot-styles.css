@@ -78,7 +78,6 @@ p.ex2 {
 }
 
 .Hotspot{
-   background: #fff;
    border-radius: 32px;
    border: 0;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -88,13 +87,16 @@ p.ex2 {
    height: 15px;
    padding: 8px;
    position: relative;
+   
+   background-color: rgba(255, 255, 255, 0.8);
+   border-radius: 50%;
+   
    --min-hotspot-opacity: 0;
-   transition: opacity 0.3s;
-   animation-timing-function: ease-in-out;
-   animation-name: breathe;
-   animation-duration: 1500ms;
+   animation-timing-function: linear;
+   animation-name: circle-ripple;
+   animation-duration: 2s;
    animation-iteration-count: infinite;
-   animation-direction: alternate;
+   animation-direction: normal;
 }
 
 .Hotspot:not([data-visible]){
@@ -159,6 +161,22 @@ p.ex2 {
     }
 }
 
+.circle-ripple {
+  background-color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: circle-ripple 1s linear infinite;
+}
+
+@keyframes circle-ripple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3), 0 0 0 0.7em rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0.7em rgba(255, 255, 255, 0.3), 0 0 0 1em rgba(255, 255, 255, 0);
+  }
+}
 
 @keyframes breathe {
     0% {
