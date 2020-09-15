@@ -35,10 +35,8 @@
    cursor: pointer;
    border-radius: 6px;
    display: inline-block;
-   padding: 10px;
-   font-family:bold;
-   font-weight: 500;
-   box-shadow: 0 0 16px rgba(120,120,120,.2), 0 0 12px rgba(120,120,120,.25);
+   padding: 10px 30px;
+   font-family:bold;   box-shadow: 0 0 16px rgba(120,120,120,.2), 0 0 12px rgba(120,120,120,.25);
    position: absolute;
    left: 50%;
    top: 60%;
@@ -50,7 +48,7 @@
 .font_t{
     font-family: "bold";
     letter-spacing: 3px;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .font_b{
