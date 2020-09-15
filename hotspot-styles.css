@@ -36,7 +36,6 @@
    border-radius: 6px;
    display: inline-block;
    padding: 10px 30px;
-
    font-family:bold;   box-shadow: 0 0 16px rgba(120,120,120,.2), 0 0 12px rgba(120,120,120,.25);
    position: absolute;
    left: 50%;
@@ -64,20 +63,16 @@
 p.ex1 {
     width: 50%;
     margin: 0px;
-    float:left;
-    padding-left:10px;
-    padding-right:10%;
-    padding-top:10px;
 }
 
 p.ex2 {
     width:90%;
     margin: 0px;
-    padding-top:5px;
-    padding-left:10px;
+    padding-bottom:10px;
 }
 
 .Hotspot{
+    z-index: 3;
    border-radius: 32px;
    border: 0;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -112,7 +107,7 @@ p.ex2 {
 }
 
 .hs{
-    z-index: 5;
+    z-index: 2;
     display:none;
     position:absolute;
     overflow:hidden;
@@ -123,7 +118,7 @@ p.ex2 {
     margin-bottom: 10px;
     max-width: 90%;
     width: 500px;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 0 0 16px #e1e1e3, 0 0 12px #fff;
 /*    border: 2px groove #f0f0f0;*/
     background: #fff;
@@ -163,8 +158,8 @@ p.ex2 {
 
 .circle-ripple {
   background-color: #ffffff;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   animation: circle-ripple 1s linear infinite;
 }
@@ -178,27 +173,15 @@ p.ex2 {
   }
 }
 
-@keyframes breathe {
-    0% {
-       opacity: .4;
-       box-shadow: 0 1px 2px rgba(200,200,200, 0.4), 0 1px 1px rgba(120,120,120, 0.1) inset;
-    }
-    100% {
-       opacity: 1;
-       box-shadow: 0 1px 30px #fff, 0 1px 20px #ddd inset;
-    }
-}
-
 .info-content{
     display: flex;
+    justify-content: space-between;
 }
 
 
 .images {
 /*    margin-right:5%;*/
     width:35%;
-    float: right;
-    right:0;
     object-fit:contain;
 /*    display:none;*/
 }
