@@ -1,3 +1,13 @@
+@font-face{
+    font-family: "bold";
+    src: url(fonts/Gotham-Narrow-Bold.ttf);
+}
+
+@font-face{
+    font-family: "book";
+    src: url(fonts/Gotham-Narrow-Book.ttf);
+}
+
 /* This keeps child nodes hidden while the element loads */
 :not(:defined) > * {
   display: none;
@@ -36,17 +46,6 @@
    z-index: 100;
  }
 
-@font-face{
-    font-family: "bold";
-    src: url(fonts/Gotham-Narrow-Bold.ttf);
-}
-
-@font-face{
-    font-family: "book";
-    src: url(fonts/Gotham-Narrow-Book.ttf);
-}
- 
-
 /* rename all class / id names */
 .font_t{
     font-family: "bold";
@@ -58,21 +57,22 @@
     font-family: "book";
     letter-spacing: 1px;
     font-size: 1em;
+    position:relative;
+    bottom:0;
 }
 
 p.ex1 {
     width: 60%;
     margin: 0px;
-    padding-top: 7px;
-    padding-bottom: 0px;
-    line-height: 1.2em;
+    padding-top: 1.5em;
+    line-height: 1.5em;
 }
 
 p.ex2 {
     width:90%;
     margin: 0px;
     padding: 0px;
-    letter-spacing: 6px;
+
 }
 
 .Hotspot{
@@ -88,27 +88,16 @@ p.ex2 {
    position: relative;
    --min-hotspot-opacity: 0;
    transition: opacity 0.3s;
-   -webkit-animation-timing-function: ease-in-out;
-   -webkit-animation-name: breathe;
-   -webkit-animation-duration: 1500ms;
-   -webkit-animation-iteration-count: infinite;
-   -webkit-animation-direction: alternate;
+   animation-timing-function: ease-in-out;
+   animation-name: breathe;
+   animation-duration: 1500ms;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
 }
 
 .Hotspot:not([data-visible]){
     opacity:0;
     animation-name: none;
-}
-               
-@-webkit-keyframes breathe {
-    0% {
-       opacity: .4;
-       box-shadow: 0 1px 2px rgba(200,200,200, 0.4), 0 1px 1px rgba(120,120,120, 0.1) inset;
-    }
-    100% {
-       opacity: 1;
-       box-shadow: 0 1px 30px #fff, 0 1px 20px #ddd inset;
-    }
 }
 
 .Hotspot:focus {
@@ -120,36 +109,62 @@ p.ex2 {
 
 .hs{
     z-index: 5;
+    display:none;
+    position:absolute;
+    overflow:hidden;
     left: 0;
     right: 0;
-    bottom: 2px;
-    position: absolute;
+    bottom: 0;
     margin: auto;
     margin-bottom: 10px;
-    width: 400px;
     max-width: 90%;
-    height: auto;
+    width: 320px;
     padding: 15px;
     border: 2px groove #f0f0f0;
-    display: none;
     background: #fff;
     border-radius: 5px;
     color: rgba(0, 0, 0, 1);
-    transition: .5s ease;
+    height: auto;
+    
     --min-hotspot-opacity: 40%;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-name: fade-in;
-    -webkit-animation-duration: 500ms;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-name: none;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction:alternate;        ;
 }
 
-@-webkit-keyframes fade-in {
+@keyframes slide-in {
     0% {
-        opacity: 0.4;
+        opacity: 0;
+        bottom: -100;
     }
     100% {
         opacity: 1;
+        bottom: 0;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+        bottom: 0;
+    }
+    100% {
+        opacity: 0;
+        bottom: -100;
+    }
+}
+
+
+@keyframes breathe {
+    0% {
+       opacity: .4;
+       box-shadow: 0 1px 2px rgba(200,200,200, 0.4), 0 1px 1px rgba(120,120,120, 0.1) inset;
+    }
+    100% {
+       opacity: 1;
+       box-shadow: 0 1px 30px #fff, 0 1px 20px #ddd inset;
     }
 }
 
@@ -166,5 +181,8 @@ p.ex2 {
 /*    display:none;*/
 }
 
+.test {
+    display: block;
+}
 
 

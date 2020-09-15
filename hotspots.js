@@ -16,8 +16,14 @@ function mvHoverOn() {
 
 function hs_show(id) {
     document.getElementById(id).style.display = "block";
+    document.getElementById(id).style.animationName = "slide-in";
+    document.getElementById(id).style.bottom = "0";
+
 }
 
 function hs_hide(id) {
-    document.getElementById(id).style.display = "none";
+//    document.getElementById(id).style.display = "none";
+    document.getElementById(id).style.animationName = "slide-out";
+    document.getElementById(id).style.bottom = "-200";
+//    document.getElementById(id).style.animationPlayState = "running";
 }
