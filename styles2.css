@@ -1,6 +1,7 @@
 model-viewer {
-    max-width:500px;
-    max-height:500px;
-  width: 100%;
-  height: 100%;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
 }
