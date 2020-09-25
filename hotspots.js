@@ -7,17 +7,18 @@ function toggleHotspots(){
 
 function mvHoverOff() {
     hotspotsVisible = false;
-    document.getElementById('btn-toggle').style.filter = "invert(70%)";
+    document.getElementById('btn-toggle').style.background-image = "url(images/info-icon2.png)";
     let list= document.getElementsByClassName('hs-element');
     for (var i = 0; i < list.length; i++) {
         list[i].style.visibility= "hidden";
     }
+
     document.getElementsByTagName("model-viewer")[0].setAttribute('interaction-prompt', "auto");
 }
 
 function mvHoverOn() {
     hotspotsVisible = true;
-    document.getElementById('btn-toggle').style.filter = "none";
+    document.getElementById('btn-toggle').style.background-image = "url(images/info-icon.png)";
     let list= document.getElementsByClassName('hs-element');
     for (var i = 0; i < list.length; i++) {
         list[i].style.visibility= "visible";
