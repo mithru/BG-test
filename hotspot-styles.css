@@ -36,13 +36,33 @@
    border-radius: 6px;
    display: inline-block;
    padding: 10px 30px;
-   font-family:bold;   box-shadow: 0 0 16px rgba(120,120,120,.2), 0 0 12px rgba(120,120,120,.25);
+   font-family:bold;
+   box-shadow: 0 0 16px rgba(120,120,120,.2), 0 0 12px rgba(120,120,120,.25);
    position: absolute;
    left: 50%;
    top: 60%;
    transform: translate3d(-50%, -50%, 0);
    z-index: 100;
  }
+
+#btn-toggle {
+
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: 50%;
+    background-color: #fff;
+    background-image:url(../images/info-icon.png);
+/*    filter: invert(100%);*/
+    position: absolute;
+    right:15px;
+    bottom:80px;
+    width: 40px;
+    height: 40px;
+
+/*    box-shadow: 0 0 6px rgba(220,220,220,.5), 0 0 6px rgba(220,220,220,.5);*/
+    border-radius: 20px;
+    border: 0;
+}
 
 /* rename all class / id names */
 .font_t{
@@ -81,7 +101,6 @@ p.ex2 {
     width: 1.2em !important;
     height: 1.2em !important;
     position: relative;
-
     background-color: rgba(255, 255, 255, 0.8);
 /*    border-radius: 50%;*/
 

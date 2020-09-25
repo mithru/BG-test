@@ -1,4 +1,13 @@
+var hotspotsVisible = true;
+
+function toggleHotspots(){
+    if(hotspotsVisible) mvHoverOff();
+    else mvHoverOn();
+}
+
 function mvHoverOff() {
+    hotspotsVisible = false;
+    document.getElementById('btn-toggle').style.filter = "invert(70%)";
     let list= document.getElementsByClassName('hs-element');
     for (var i = 0; i < list.length; i++) {
         list[i].style.visibility= "hidden";
@@ -7,6 +16,8 @@ function mvHoverOff() {
 }
 
 function mvHoverOn() {
+    hotspotsVisible = true;
+    document.getElementById('btn-toggle').style.filter = "none";
     let list= document.getElementsByClassName('hs-element');
     for (var i = 0; i < list.length; i++) {
         list[i].style.visibility= "visible";
