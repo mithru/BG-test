@@ -51,7 +51,7 @@
     background-size: 30px 30px;
     background-position: 50%;
     background-color: #fff;
-    background-image:url(../images/info-icon.png);
+    background-image:url(images/info-icon.png);
 /*    filter: invert(100%);*/
     position: absolute;
     right:15px;
