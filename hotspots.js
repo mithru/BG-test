@@ -7,7 +7,7 @@ function toggleHotspots(){
 
 function mvHoverOff() {
     hotspotsVisible = false;
-    document.getElementById('btn-toggle').style.setAttribute('background-image',"url(images/info-icon2.png)";
+    document.getElementById('btn-toggle').style.setAttribute('background-image',"url(images/info-icon2.png)");
     let list= document.getElementsByClassName('hs-element');
     for (var i = 0; i < list.length; i++) {
         list[i].style.visibility= "hidden";
@@ -18,7 +18,7 @@ function mvHoverOff() {
 
 function mvHoverOn() {
     hotspotsVisible = true;
-    document.getElementById('btn-toggle').style.setAttribute('background-image',"url(images/info-icon.png)";
+    document.getElementById('btn-toggle').style.setAttribute('background-image',"url(images/info-icon.png)");
     let list= document.getElementsByClassName('hs-element');
     for (var i = 0; i < list.length; i++) {
         list[i].style.visibility= "visible";
